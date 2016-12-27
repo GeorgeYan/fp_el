@@ -1,13 +1,16 @@
 defmodule Math do
-  def zero?(0) do
-    true
-  end
+  @moduledoc """
+  Provides math-related functions.
 
-  def zero?(x) when is_integer(x) do
-    false
+  ## Examples
+  iex> Math.sum(1,2)
+  3
+  """
+
+  @doc """
+  Calculates the sum of two number.
+  """
+  def sum(a,b) do
+    a+b
   end
 end
-
-IO.puts Math.zero?(0)
-IO.puts Math.zero?(1)
-IO.puts Math.zero?(0.0)
